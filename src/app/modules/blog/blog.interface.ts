@@ -1,5 +1,5 @@
 export interface IBlog {
   title: string;
-  image: string;
+  image?: string;
   description: string;
 }

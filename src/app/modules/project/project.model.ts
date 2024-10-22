@@ -3,7 +3,7 @@ import { IProject } from "./project.interface";
 
 const projectSchema = new Schema<IProject>({
   title: { type: String, required: true },
-  image: { type: String, required: true },
+  image: { type: String },
   description: { type: String, required: true },
   techStack: [String],
   repoLinkClient: { type: String, required: true },

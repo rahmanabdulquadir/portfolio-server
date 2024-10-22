@@ -23,8 +23,8 @@ const getProjects = catchAsync(async (req: Request, res: Response) => {
   });
 });
 const getSingleProject = catchAsync(async (req: Request, res: Response) => {
-  const { name } = req.params;
-  const result = await projectServices.getSingleProjectFromDB(name);
+  const { id } = req.params;
+  const result = await projectServices.getSingleProjectFromDB(id);
   sendResponse(res, {
     success: true,
     statusCode: StatusCodes.OK,
