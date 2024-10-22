@@ -12,7 +12,7 @@ const retrieveSkillFromDB = async () => {
   return result;
 };
 
-export const skillService = {
+export const skillServices = {
   createSkillIntoDB,
   retrieveSkillFromDB,
 };
