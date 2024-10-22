@@ -1,5 +1,5 @@
 import { Blog } from "./blog.model"
-import { IBlog } from "./blog.router"
+import { IBlog } from "./blog.interface"
 
 const createBlogIntoDB=async(payload:IBlog)=>{
   const result=await Blog.create(payload)
