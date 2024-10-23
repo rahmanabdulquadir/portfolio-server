@@ -2,6 +2,7 @@ import app from "./app";
 import config from "./app/config";
 import mongoose from "mongoose";
 import { Server } from "http";
+import { seed } from "./app/modules/user/user";
 
 let server: Server;
 const port = config.port;
@@ -9,6 +10,7 @@ const port = config.port;
 async function main() {
   try {
     await mongoose.connect(config.database_url as string);
+    await seed()
 
     server = app.listen(port, () => {
       console.log(`Example app listening on port ${port}`);
