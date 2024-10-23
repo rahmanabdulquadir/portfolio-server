@@ -27,7 +27,6 @@ const getBlog = catchAsync(async (req, res) => {
 const getSingleBlog = catchAsync(async (req, res) => {
   const { id } = req.params;
   const result = await blogServices.getSingleBlogFromDB(id);
-  console.log(result)
   sendResponse(res, {
     success: true,
     statusCode: StatusCodes.OK,

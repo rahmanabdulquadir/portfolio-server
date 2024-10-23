@@ -3,7 +3,7 @@ import { ISkill } from "./skill.interface";
 
 const skillSchema = new Schema<ISkill>(
   {
-    name: { type: String, required: true },
+    name: { type: String, required: true, unique:true },
     estimate: { type: Number, required: true },
   
   },

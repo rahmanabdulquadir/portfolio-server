@@ -1,23 +1,23 @@
-import express from "express";
+import { Router } from "express";
 import { projectRoute } from "../modules/project/project.router";
 import { blogRoute } from "../modules/blog/blog.router";
 import { skillRoute } from "../modules/skill/skill.router";
 import { authRouter } from "../modules/auth/auth.router";
 
-const router = express.Router();
+const router = Router();
 
-const moduleRoutes = [
+const moduleRouter = [
   {
     path: "/projects",
-    route: projectRoute,
+    router: projectRoute,
   },
   {
     path: "/blogs",
-    route: blogRoute,
+    router: blogRoute,
   },
   {
     path: "/skills",
-    route: skillRoute,
+    router: skillRoute,
   },
   {
     path: "/auth",
@@ -25,6 +25,7 @@ const moduleRoutes = [
   },
 ];
 
-moduleRoutes.forEach((e) => router.use(e.path, e.route));
+moduleRouter?.forEach((route) => router.use(route.path, route.router));
 
-export default router;
+
+export default router

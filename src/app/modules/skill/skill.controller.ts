@@ -9,7 +9,7 @@ const createSkill = catchAsync(async (req, res) => {
   sendResponse(res, {
     success:true,
     statusCode: StatusCodes.OK,
-    message: "create success",
+    message: "New skill created successfully",
     data: result,
   });
 });
@@ -19,7 +19,7 @@ const retrieveSkill = catchAsync(async (req, res) => {
   sendResponse(res, {
     success:true,
     statusCode: StatusCodes.OK,
-    message: "retrieve success",
+    message: "All skills retrieved successfully",
     data: result,
   });
 });
